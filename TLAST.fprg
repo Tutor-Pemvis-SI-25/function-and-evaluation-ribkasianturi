@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TLAST"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-18 09:13:50 PM"/>
+        <attribute name="created" value="VXNlcjtSSUJLQUFBQTsyMDI1LTExLTE4OzA4OjIzOjQwIFBNOzIyNTI="/>
+        <attribute name="edited" value="VXNlcjtSSUJLQUFBQTsyMDI1LTExLTE4OzA5OjEzOjUwIFBNOzE7MjM2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Deskripsi, KodeMK, NamaMK, Dosen, Deadline, Keterangan, Status" type="String" array="True" size="10"/>
+            <declare name="tingkatKesulitan, hariDeadline" type="Integer" array="True" size="10"/>
+            <declare name="jumlahTugas" type="Integer" array="False" size=""/>
+            <declare name="perintah" type="String" array="False" size=""/>
+            <while expression="">
+                <output expression="&quot;masukkan perintah:&quot;" newline="True"/>
+                <input variable="perintah"/>
+                <if expression="perintah==&quot;Add task&quot;">
+                    <then>
+                        <call expression="TambahTugas()"/>
+                    </then>
+                    <else>
+                        <if expression="perintah==&quot;update task status&quot;">
+                            <then>
+                                <call expression="UpdateStatus()"/>
+                            </then>
+                            <else>
+                                <if expression="perintah==&quot;show assignment&quot;">
+                                    <then>
+                                        <call expression="TampilkanTugas()"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="tambahTugas" type="Integer" variable="">
+        <parameters>
+            <parameter name="daftarTugas" type="Integer" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+</flowgorithm>
